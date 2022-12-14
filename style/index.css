@@ -1,0 +1,12 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#aviso-retratil{
+    background-color: #FAAB43;
+}
+#aviso-retratil p{
+    color:#FFFF;
+}
