@@ -1,13 +1,12 @@
-* {
+*{
   padding: 0;
   margin: 0;
+  font-family: 'Inter', sans-serif;
   box-sizing: border-box;
-  font-family: "Inter", sans-serif;
   list-style: none;
   text-decoration: none;
-  outline: 1px solid;
-}
 
+}
 #aviso-retratil {
   background-color: #faab43;
   display: flex;
@@ -16,37 +15,98 @@
   padding: 10px 0;
 }
 
-#aviso-retratil img {
+#aviso-retratil img{
   margin-right: 20px;
 }
 
-#aviso-retratil p {
-  color: #ffff;
+#aviso-retratil p{
+  color: #FFFFFF
 }
-.container-header {
-  display: flex;
-}
-header {
+header{
   padding: 0 30px;
 }
-header nav {
+header nav{
   display: flex;
   justify-content: space-between;
   height: 56px;
 }
-header nav > div {
+header nav > div{
   display: flex;
   align-items: center;
 }
-header nav > div:first-child ul {
-  display: flex;
+
+header nav > div:first-child ul{
+  display:flex;
+  margin-left: 26px;
 }
-header nav > div:last-child ul {
+
+header nav > div:first-child ul li{
+  margin-right: 16px;
+  position: relative;
+}
+
+header nav > div:first-child ul li a{
+  font-size: 15px;
+  color: #474747;
+}
+
+header nav > div:first-child ul li ul{
+  position: absolute;
+  left: 0;
+  top: 100%;
+  display: initial;
+  margin: 0;
+  width: 150px;
+  opacity: 0;
+  visibility: hidden;
+  transition-duration: .3s;
+  background-color: #faab43;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+header nav > div:first-child ul li:hover ul{
+  opacity: 1;
+  visibility: visible;
+}
+
+header nav > div:first-child ul li ul a{
+  color: #FFFFFF;
+  line-height: 40px;
+}
+
+header nav > div:first-child ul li ul a:hover{
+  color: aqua;
+}
+
+header nav > div:last-child ul{
   display: none;
 }
-header nav > div:nth-child(2) {
-  display: flex;
+header nav .header-select{
+  margin-left: 26px;
 }
-header nav .header-select-title {
+header nav .header-select-title{
   display: flex;
+  align-items: center;
+  padding-right: 30px;
+  position: relative;
+}
+header nav .header-select-title::after{
+  content: "";
+  position: absolute;
+  width: 5px;
+  aspect-ratio: 1;
+
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+
+  top: 9px;
+  right: 11px;
+  transform: rotate(45deg);
+}
+header nav .header-select-title:hover::after{
+  transform: rotate(-135deg);
+}
+header nav .header-select-title h6{
+  margin-left: 10px;
 }
